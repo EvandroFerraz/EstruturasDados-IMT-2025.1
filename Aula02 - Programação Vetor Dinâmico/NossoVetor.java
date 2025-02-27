@@ -1,9 +1,10 @@
 public class NossoVetor{
-    // 1- método construtor (*)
-    // 2- método para inserção e método para redimensionar (*)
-    // 3- método para verificar se o vetor esta cheio ou vazio (*)
-    // 4- método para remoção (*)
-    // 5- teste (*)
+    // 1- métodos construtores (*)
+    // 2- métodos para verificar se o vetor esta cheio ou vazio (*)
+    // 3- método para redimensionar o tamanho do vetor (*)
+    // 4- método para inserir um elemento no vetor (*)
+    // 5- método para remoção do último elemento inserido (*)
+    // 6- programar classe de teste (*)
 
     private int ocupacao; // numero de elementos que o vetor possui
     private int[] vetor; 
@@ -12,8 +13,7 @@ public class NossoVetor{
         vetor = new int[tamanho];
         ocupacao = 0;
     }
-    // substitui o construtor padrão do java
-    // cria um vetor com 10 elementos por padrão
+    // substitui o construtor padrão do java, criando um vetor com 10 elementos quando o construtor for chama sem parâmetros
     // NossoVetor vetor = new NossoVetor();
     // escolher o tamanho inicial (no exemplo, o tamanho seria 4)
     // NossoVetor vetor = new NossoVetor(4);
@@ -32,7 +32,7 @@ public class NossoVetor{
     public boolean estaCheio(){
         return ocupacao == vetor.length;
     }
-    // o vetor estará vazio se a quantidade de elemtnos for zero
+    // o vetor estará vazio se a quantidade de elementos for zero
     public boolean estaVazio(){
         return ocupacao == 0;
     }
