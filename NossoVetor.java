@@ -1,7 +1,7 @@
 public class NossoVetor{
     // 1- método construtor (*)
-    // 2- método para inserção e método para redimensionar
-    // 3- método para verificar se o vetor esta cheio ou não (*)
+    // 2- método para inserção e método para redimensionar (*)
+    // 3- método para verificar se o vetor esta cheio ou vazio (*)
     // 4- método para remoção
     // 5- teste
 
@@ -20,11 +20,13 @@ public class NossoVetor{
     public NossoVetor(){
         this(10);
     }
+    
     public void insere(int i){
-        // verificar se o vetor esta cheio
-        // se o vetor estiver cheio, a gente vai redimensionar 
-        // o tamanho
+        // redimensiona o vetor, dobrando seu tamanho quando cheio
+        if(estaCheio()) redimensionaVetor(vetor.length*2);   
+        vetor[ocupacao++] = i;
     }
+
     // verificando se a quantidade de elementos no vetor
     // já atingiu o tamanho atual definido
     public boolean estaCheio(){
@@ -35,4 +37,18 @@ public class NossoVetor{
         return ocupacao == 0;
     }
 
+    // método para redimensionar o tamanho do vetor se necessário
+    private void redimensionaVetor (int novoTamanho){
+        int[] temp = new int[novoTamanho];
+        // copiamos os elementos dentro do vetor[] para temp[]
+        for(int i = 0; i < ocupacao; i++){
+            temp[i] = vetor[i];
+        }
+        vetor = temp;
+    }
+
+    // método para retornar o tamanho máximo atual do vetor
+    public int getTamanho(){
+        return vetor.length;
+    }   
 }
