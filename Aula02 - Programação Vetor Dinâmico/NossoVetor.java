@@ -81,4 +81,21 @@ public class NossoVetor{
         }
         return s + "\n";
     }
+
+    // Percorre o vetor buscando por um número específico que foi enviado como 
+    // parâmetro (int i), retorna a posição do vetor onde o número foi encontrado
+    public int pesquisaValor(int numeroPesquisado){
+        if(estaVazio()){
+            System.out.println("Vetor esta vazio!!");
+        }else{ // buscar o número dentro do vetor
+            // busca com complexidade linear
+            for(int x = 0; x < ocupacao; x++){
+                if(vetor[x] == numeroPesquisado){
+                    // número encontrado \o/
+                    return x;
+                }
+            }
+        }
+        return -1; // -1 quer dizer que o número não foi encontrado no vetor
+    }
 }

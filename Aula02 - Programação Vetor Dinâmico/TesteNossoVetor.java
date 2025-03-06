@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class TesteNossoVetor{
     public static void main(String[] args){
+        
         NossoVetor v1 = new NossoVetor(5);
         NossoVetor v2 = new NossoVetor(); // tamanho padrão = 10
 
@@ -22,16 +23,18 @@ public class TesteNossoVetor{
         // ocupacao = 11 e tamanho = 20
         for(int i = 0; i <= 10; i++){
             v1.insere(i);
-            System.out.println("Elemento Inserido: " + i + " Tamanho Atual: " + v1.getTamanho());
+            // System.out.println("Elemento Inserido: " + i + " Tamanho Atual: " + v1.getTamanho());
         }
-        System.out.println("Informações completas do vetor v1: \n " + v1);
+        // System.out.println("Informações completas do vetor v1: \n " + v1);*/
         
+        System.out.println("O numero 7 foi encontrado na posicao: " + v1.pesquisaValor(7));
+
         // Removendo vários elementos (9) do vetor
-        for(int i = 0; i < 9; i++){
+        /*for(int i = 0; i < 9; i++){
             int a = v1.remove();
             System.out.println("Elemento Removido: " + a + " Tamanho Atual: " + v1.getTamanho());
         }
-        System.out.println("Informações completas do vetor v1: \n " + v1);
+        System.out.println("Informações completas do vetor v1: \n " + v1);*/
 
         // excluindo todos os elementos do vetor v1
         // repete o bloco de código enquanto o vetor v1 não estiver vazio
